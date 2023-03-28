@@ -15,6 +15,7 @@ public class Ejercitar {
 
 
         //Métodos
+        //Constructor método 1
     
     public Ejercitar(Persona usuario){
         
@@ -23,11 +24,28 @@ public class Ejercitar {
         this.usuario = usuario;
         this.imc = 0;
     }
+    
+    public Ejercitar(String nombre, int edad, double estatura, double peso){
+        
+        this.tiempo = 0;
+        this.calorias = 0;
+        this.usuario = new Persona(nombre, edad, estatura, peso);
+        this.imc = 0;
+    }
 
     public double IMC() {
         imc = this.usuario.getPeso()/(this.usuario.getEstatura()*this.usuario.getEstatura());
         return imc;
     }
+
+    @Override
+    public String toString() {
+        return "Dhistórico del usuario \n" +
+                "Tiempo total de ejercicio: " + tiempo + "minutos\n" 
+                + "total calorias quemadas: " + calorias + "Cal";
+    }
+    
+    
     
     
 } 
