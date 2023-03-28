@@ -34,7 +34,7 @@ public class Principal {
         
         JOptionPane.showMessageDialog(null, "Usuario FIT: \n" + usuario);
         JOptionPane.showMessageDialog(null, "Indice de masa corporal:\n"+appEjercitar.IMC());
-        if 
+        
     }
     
 }
