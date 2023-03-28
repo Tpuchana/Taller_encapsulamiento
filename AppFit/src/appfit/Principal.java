@@ -28,11 +28,17 @@ public class Principal {
         peso        = Double.parseDouble (JOptionPane.showInputDialog("Ingrese su peso:"));
                 //Integer.parseInt para pasar de Str a int
                 //Double.parseDouble para pasar de Str a double
-        
-        Persona usuario = new Persona(nombre, edad, estatura, peso);
-        Ejercitar appEjercitar = new Ejercitar(usuario);
-        
-        JOptionPane.showMessageDialog(null, "Usuario FIT: \n" + usuario);
+                
+                
+                
+////App ejercitar método 1
+//        
+//        Persona usuario = new Persona(nombre, edad, estatura, peso);
+//        Ejercitar appEjercitar = new Ejercitar(usuario);
+    
+        //App ejercitar método 2
+        Ejercitar appEjercitar = new Ejercitar(nombre, edad, estatura, peso);
+        JOptionPane.showMessageDialog(null, "Usuario FIT: \n" + appEjercitar.infoUsuario());
         JOptionPane.showMessageDialog(null, "Indice de masa corporal:\n"+appEjercitar.IMC());
         
     }

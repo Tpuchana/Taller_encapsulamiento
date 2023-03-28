@@ -37,12 +37,29 @@ public class Ejercitar {
         imc = this.usuario.getPeso()/(this.usuario.getEstatura()*this.usuario.getEstatura());
         return imc;
     }
+    
+    private void correr(double distancia){
+        double caloriasQuemadas= 1.03*this.usuario.getPeso()*distancia;
+        this.calorias+=caloriasQuemadas;
+        
+    }
+    public void correr(double velocidad, double tiempo){
+        double distancia = velocidad*tiempo/60;
+        //recursividad
+        this.correr(distancia);
+        this.tiempo+=tiempo;
+        
+    }
 
     @Override
     public String toString() {
         return "Dhistórico del usuario \n" +
                 "Tiempo total de ejercicio: " + tiempo + "minutos\n" 
                 + "total calorias quemadas: " + calorias + "Cal";
+    }
+    public String infoUsuario(){
+        return this.usuario.toString(); 
+        
     }
     
     
