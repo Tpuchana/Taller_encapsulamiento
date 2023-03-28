@@ -39,7 +39,16 @@ public class Principal {
         //App ejercitar método 2
         Ejercitar appEjercitar = new Ejercitar(nombre, edad, estatura, peso);
         JOptionPane.showMessageDialog(null, "Usuario FIT: \n" + appEjercitar.infoUsuario());
-        JOptionPane.showMessageDialog(null, "Indice de masa corporal:\n"+appEjercitar.IMC());
+        JOptionPane.showMessageDialog(null, "Indice de masa corporal:\n"+appEjercitar.getImc());
+        
+        //Haciendo ejercicio
+        JOptionPane.showMessageDialog(null, "Vas a correr, ingresa los siguientes datos");
+        double tiempo = Double.parseDouble(JOptionPane.showInputDialog("Tiempo de ejercicio: "));
+        double velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad promedio: "));
+        appEjercitar.correr(velocidad, tiempo);
+        JOptionPane.showMessageDialog(null, "Datos del ejercicio: \n" + appEjercitar);
+        
+        
         
     }
     

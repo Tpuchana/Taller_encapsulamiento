@@ -49,7 +49,9 @@ public class Persona {
     public double getPeso() {
         return peso;
     }
-
+    public void bajarPeso(){
+        this.peso--;
+    }
     @Override
     public String toString() {
         return "Datos Personales \n"
